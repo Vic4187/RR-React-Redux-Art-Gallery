@@ -17,6 +17,7 @@ function App(props) {
 
   useEffect(() => {
     dispatch(fetchData())
+    // props.objectId only exists if I have 
   }, [props.objectId, dispatch])
 
 
@@ -42,4 +43,6 @@ function App(props) {
 
 const mapStateToProps = (state, ownProps) => ({ objectId: state.data.objectId })
 
+//curried or applyed function to your component
 export default connect(mapStateToProps)(App);
+//in effect
